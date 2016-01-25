@@ -4,7 +4,7 @@ set directory=~\root\var\vim\swap
 " backup file directory
 set backupdir=~\root\var\vim\backup
 " undo file directory
-set backupdir=~\root\var\vim\undo
+set undodir=~\root\var\vim\undo
 
 " copy to clipboard
 set clipboard=unnamed

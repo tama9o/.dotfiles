@@ -1,6 +1,11 @@
 
 .*
 .*/
+*~
+_viminfo
+
+vimperator/
+root/
 
 AppData/
 Contacts/
@@ -13,7 +18,10 @@ Pictures/
 Videos/
 Music/
 
-*~
+OneDrive/
+Saved Games/
+Searches/
+IntelGraphicsProfiles/
 
 *.DAT
 *.init
