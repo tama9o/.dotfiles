@@ -1,7 +1,13 @@
 
+!.gitignore
+!.gvimrc
+!.vimrc
+!.vimperatorrc
+
 .*
 .*/
 *~
+
 _viminfo
 
 vimperator/
