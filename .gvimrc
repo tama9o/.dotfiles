@@ -1,8 +1,8 @@
 " font
 set guifont=MS_Gothic:h10
 
-" c•@ƒfƒtƒHƒ‹ƒg‚Í24
+" ç¸¦å¹…ã€€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯24
 set lines=40
-" ‰¡•@ƒfƒtƒHƒ‹ƒg‚Í80
+" æ¨ªå¹…ã€€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯80
 set columns=150
 
