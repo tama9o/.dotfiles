@@ -1,10 +1,10 @@
 
 " swap file directory
-set directory=~\root\var\vim\swap
+set directory=~/.vim/swap
 " backup file directory
-set backupdir=~\root\var\vim\backup
+set backupdir=~/.vim/backup
 " undo file directory
-set undodir=~\root\var\vim\undo
+set undodir=~/.vim/undo
 
 " copy to clipboard
 set clipboard=unnamed

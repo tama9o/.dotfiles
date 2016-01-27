@@ -2,7 +2,7 @@
 noremap j 3<C-e>
 noremap k 3<C-y>
 
-"ºÏİÄŞ×²İÓ°ÄŞ‚É©“®‚Åime‚ğOFF‚É‚·‚é
-"ƒRƒsƒyŒ³ƒy[ƒW@ http://vimperator.g.hatena.ne.jp/teramako/20090311/1236776437
+"ï½ºï¾ï¾ï¾„ï¾ï¾—ï½²ï¾ï¾“ï½°ï¾„ï¾æ™‚ã«è‡ªå‹•ã§imeã‚’OFFã«ã™ã‚‹
+"ã‚³ãƒ”ãƒšå…ƒãƒšãƒ¼ã‚¸ã€€ http://vimperator.g.hatena.ne.jp/teramako/20090311/1236776437
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 
