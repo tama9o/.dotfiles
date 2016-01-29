@@ -1,6 +1,7 @@
 #!/bin/bash
 
-REPDIR=`dirname $0`
+REPODIR=`pwd`
+REPODIR=`basename $REPODIR`
 
 ln -sf $REPODIR/.vimrc ../.vimrc
 ln -sf $REPODIR/.gvimrc ../.gvimrc
