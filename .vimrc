@@ -1,3 +1,7 @@
+" encoding
+set fileencoding=utf-8
+set encoding=utf-8
+scriptencoding utf-8
 
 " swap file directory
 set directory=~/.vim/swap
