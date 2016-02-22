@@ -22,11 +22,11 @@ set matchpairs& matchpairs=<:>
 
 syntax on
 
-" tab config
+" tab char config
 set tabstop=4
-set showtabline=4
 set shiftwidth=4
-set expandtab
+"set expandtab
+set noexpandtab
 
 "set autoindent
 "set smartindent
@@ -53,6 +53,8 @@ set shellslash
 
 set t_vb=
 set novisualbell
+
+set showtabline=2
 
 " key maps
 nnoremap tt <C-u>:tabnew<cr><Esc>
