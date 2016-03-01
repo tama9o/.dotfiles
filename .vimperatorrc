@@ -1,8 +1,22 @@
 
-noremap j 3<C-e>
-noremap k 3<C-y>
+set noerrorbells
 
-"ｺﾏﾝﾄﾞﾗｲﾝﾓｰﾄﾞ時に自動でimeをOFFにする
+set focuscontent
+
+noremap j 4<C-e>
+noremap k 4<C-y>
+
+set hintchars="jklfdsahgiopewqty"
+
+set ignorecase
+set smartcase
+
+nnoremap s :tabopen<Space>google<space>
+nmap S <C-c>:tabopen<Space>google<Space><C-v><CR>
+vmap S <C-c><Esc><Esc>:tabopen<Space>google<Space><C-v><CR>
+
+"ノーマルモード時に自動でimeをOFFにする
 "コピペ元ページ　 http://vimperator.g.hatena.ne.jp/teramako/20090311/1236776437
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
+
 
