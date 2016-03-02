@@ -37,7 +37,9 @@ set textwidth=0
 set wrapmargin=0
 
 " change current dir
-set autochdir
+if exists("+autochdir")
+	set autochdir
+endif
 
 " search config
 set ignorecase
