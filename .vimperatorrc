@@ -1,8 +1,27 @@
 
-noremap j 3<C-e>
-noremap k 3<C-y>
+set noerrorbells
 
-"ｺﾏﾝﾄﾞﾗｲﾝﾓｰﾄﾞ時に自動でimeをOFFにする
+set focuscontent
+
+noremap j 4<C-e>
+noremap k 4<C-y>
+noremap tt :tabopen<Space>
+noremap tn <C-n>
+noremap tp <C-p>
+
+set hintchars="jklfdsahgiopewqty"
+" highlight Hint z-index:5000; font-size:14px; color:white; background-color:green; border-color:ButtonShadow; border-width:1px; border-style:solid; padding:1px 2px 1px 2px; position:absolute; font-family: Menlo, Consolas, Monaco, monospace; text-transform: lowercase;
+highlight Hint font-family: Arial; font-size: 21px; font-weight: bold; text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black; color: #33cccc;
+
+set ignorecase
+set smartcase
+
+nnoremap s :tabopen<Space>google<space>
+nmap S <C-c>:tabopen<Space>google<Space><C-v><CR>
+vmap S <C-c><Esc><Esc>:tabopen<Space>google<Space><C-v><CR>
+
+"ノーマルモード時に自動でimeをOFFにする
 "コピペ元ページ　 http://vimperator.g.hatena.ne.jp/teramako/20090311/1236776437
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
+
 
