@@ -56,6 +56,12 @@ set novisualbell
 
 set showtabline=2
 
+" for text file
+autocmd FileType text setlocal expandtab tabstop=2 shiftwidth=2
+
+" for markdown file
+autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal filetype=markdown expandtab tabstop=4 shiftwidth=4
+
 " key maps
 nnoremap tt <C-u>:tabnew<cr><Esc>
 nnoremap tn gt
