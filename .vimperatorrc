@@ -17,8 +17,13 @@ set ignorecase
 set smartcase
 
 nnoremap s :tabopen<Space>google<space>
+" Search clipboard text / selected text.
 nmap S <C-c>:tabopen<Space>google<Space><C-v><CR>
 vmap S <C-c><Esc><Esc>:tabopen<Space>google<Space><C-v><CR>
+
+" Open clipboad URL / selected URL
+nmap T <C-c>:tabopen<Space><C-v><CR>
+vmap T <C-c><Esc><Esc>:tabopen<Space><C-v><CR>
 
 "ノーマルモード時に自動でimeをOFFにする
 "コピペ元ページ　 http://vimperator.g.hatena.ne.jp/teramako/20090311/1236776437
