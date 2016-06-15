@@ -71,3 +71,5 @@ nnoremap tp gT
 
 nnoremap j gj
 nnoremap k gk
+
+set runtimepath+=~/.vim
