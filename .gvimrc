@@ -3,8 +3,9 @@ scriptencoding utf-8
 
 " font
 if has('win32') || has('win64')
-  set guifont=MS_Gothic:h10
-  set guifontwide=MS_Gothic:h10
+  set guifont=Consolas:h10.5
+  set guifontwide=MS_Gothic:h10.5
+
 else
   set guifont=Takaoゴシック\ 13
   set guifontwide=Takaoゴシック\ 13
@@ -21,3 +22,9 @@ set columns=150
 " disable beep sound
 set t_vb=
 
+set guioptions-=T
+
+" colorscheme molokai
+
+gui
+set transparency=221
