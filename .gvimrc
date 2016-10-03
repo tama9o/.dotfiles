@@ -23,6 +23,7 @@ set columns=150
 set t_vb=
 
 set guioptions-=T
+set guioptions-=m
 
 if filereadable($home . "/.vim/colors/molokai.vim")
   colorscheme molokai
