@@ -31,4 +31,6 @@ vmap T <C-c><Esc><Esc>:tabopen<Space><C-v><CR>
 "コピペ元ページ　 http://vimperator.g.hatena.ne.jp/teramako/20090311/1236776437
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 
-
+" move page, then always disable `ignore all key`.
+" http://qiita.com/mwmsnn/items/93db4ddf3d8c9babd603
+autocmd LocationChange .* js modes.passAllKeys = false
