@@ -3,8 +3,9 @@ set fileencoding=utf-8
 set encoding=utf-8
 scriptencoding utf-8
 
-" swap file directory
-set directory=~/.vim/swap
+" swap setting
+set noswapfile
+" set directory=~/.vim/swap
 " backup file directory
 set backupdir=~/.vim/backup
 " undo file directory
@@ -14,6 +15,8 @@ set undodir=~/.vim/undo
 set clipboard=unnamed
 
 " show special chars and others.
+set cursorline
+set number
 set relativenumber
 set ruler
 set list
@@ -87,6 +90,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'https://github.com/Shougo/unite.vim.git'
 	Plug 'Shougo/vimfiler'
 	Plug 'vim-scripts/javacomplete'
+	Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " for vimfiler.
