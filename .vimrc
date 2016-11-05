@@ -21,7 +21,7 @@ set relativenumber
 set ruler
 set list
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
-set matchpairs& matchpairs=<:>
+set matchpairs+=<:>
 
 syntax on
 
@@ -84,6 +84,9 @@ nnoremap <C-]> g<C-]>
 
 set runtimepath+=~/.vim
 
+if filereadable(expand("~/.vim/.local.vimrc"))
+	source ~/.vim/.local.vimrc
+endif
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
