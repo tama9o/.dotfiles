@@ -35,5 +35,6 @@ if has('multi_byte_ime')
 endif
 
 gui
-set transparency=236
-
+if has('win32') || has('win64')
+	set transparency=236
+endif

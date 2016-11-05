@@ -104,3 +104,6 @@ noremap <C-X><C-T> :VimFiler -split -simple -winwidth=45 -no-quit<ENTER>
 autocmd FileType java :setlocal omnifunc=javacomplete#Complete
 autocmd FileType java :setlocal completefunc=javacomplete#CompleteParamsInfo
 
+if filereadable(expand("~/.vim/colors/molokai.vim"))
+  colorscheme molokai
+endif
