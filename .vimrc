@@ -68,6 +68,8 @@ set showtabline=2
 
 " for text file
 autocmd FileType text setlocal expandtab tabstop=2 shiftwidth=2
+" for mail file
+autocmd FileType mail setlocal expandtab tabstop=2 shiftwidth=2
 
 " for markdown file
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal filetype=markdown expandtab tabstop=4 shiftwidth=4
