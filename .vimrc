@@ -70,6 +70,10 @@ set showtabline=2
 autocmd FileType text setlocal expandtab tabstop=2 shiftwidth=2
 " for mail file
 autocmd FileType mail setlocal expandtab tabstop=2 shiftwidth=2
+" for cpp file
+autocmd FileType cpp setlocal expandtab tabstop=4 shiftwidth=4
+" for yaml file
+autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2
 
 " for markdown file
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal filetype=markdown expandtab tabstop=4 shiftwidth=4
@@ -92,15 +96,23 @@ endif
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
+	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'https://github.com/Shougo/unite.vim.git'
 	Plug 'Shougo/vimfiler'
+	Plug 'Shougo/unite-outline'
 	Plug 'vim-scripts/javacomplete'
 	Plug 'Yggdroot/indentLine'
+	Plug 'fatih/vim-go'
 call plug#end()
 
 " for vimfiler.
 source ~/.vim/pluginrc/vimfiler.vim
-noremap <C-X><C-T> :VimFiler -split -simple -winwidth=45 -no-quit<ENTER>
+noremap <C-X><C-F> :VimFiler -split -simple -winwidth=45 -no-quit<ENTER>
+
+" for unite-outline.
+noremap <C-X><C-L> :Unite outline<ENTER>
+
+noremap <C-X><C-T> :!ctags -R<ENTER>
 
 " for javacomplete
 autocmd FileType java :setlocal omnifunc=javacomplete#Complete
