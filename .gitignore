@@ -1,35 +1,8 @@
+.vim/undo
+.vim/backup
+.vim/plugged
 
-!.gitignore
-!.gvimrc
-!.vimrc
-!.vimperatorrc
+.vim/.local.vimrc
 
-.*
-.*/
-*~
-
-_viminfo
-
-vimperator/
-root/
-
-AppData/
-Contacts/
-Desktop/
-Documents/
-Downloads/
-Favorites/
-Links/
-Pictures/
-Videos/
-Music/
-
-OneDrive/
-Saved Games/
-Searches/
-IntelGraphicsProfiles/
-
-*.DAT
-*.init
-NTUSER*
-
+.vim/autoload
+.vim/colors
