@@ -27,6 +27,10 @@ vmap S <C-c><Esc><Esc>:tabopen<Space>google<Space><C-v><CR>
 nmap T <C-c>:tabopen<Space><C-v><CR>
 vmap T <C-c><Esc><Esc>:tabopen<Space><C-v><CR>
 
+" Open clipboad URL / selected URL with new private window
+nmap W <C-c>:winopen -p<Space><C-v><CR>
+vmap W <C-c><Esc><Esc>:winopen -p<Space><C-v><CR>
+
 "ノーマルモード時に自動でimeをOFFにする
 "コピペ元ページ　 http://vimperator.g.hatena.ne.jp/teramako/20090311/1236776437
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
