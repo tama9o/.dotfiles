@@ -99,24 +99,33 @@ call plug#begin('~/.vim/plugged')
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'https://github.com/Shougo/unite.vim.git'
 	Plug 'Shougo/vimfiler'
-	Plug 'Shougo/unite-outline'
-	Plug 'vim-scripts/javacomplete'
 	Plug 'Yggdroot/indentLine'
 	Plug 'fatih/vim-go'
+	Plug 'dhruvasagar/vim-table-mode'
+	Plug 'lambdalisue/gina.vim'
+	Plug 'prabirshrestha/async.vim'
+	Plug 'prabirshrestha/vim-lsp'
+	Plug 'prabirshrestha/asyncomplete.vim'
+	Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+	Plug 'ryanolsonx/vim-lsp-python'
 call plug#end()
 
 " for vimfiler.
 source ~/.vim/pluginrc/vimfiler.vim
 noremap <C-X><C-F> :VimFiler -split -simple -winwidth=45 -no-quit<ENTER>
 
-" for unite-outline.
-noremap <C-X><C-L> :Unite outline<ENTER>
-
 noremap <C-X><C-T> :!ctags -R<ENTER>
 
-" for javacomplete
-autocmd FileType java :setlocal omnifunc=javacomplete#Complete
-autocmd FileType java :setlocal completefunc=javacomplete#CompleteParamsInfo
+" for vim-lsp
+" python
+if executable('pyls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
 
 if filereadable(expand("~/.vim/colors/molokai.vim"))
   colorscheme molokai
