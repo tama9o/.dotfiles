@@ -119,6 +119,9 @@ noremap <C-X><C-F> :VimFiler -split -simple -winwidth=45 -no-quit<ENTER>
 
 noremap <C-X><C-T> :!ctags -R<ENTER>
 
+" for Control-P
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " for vim-lsp
 " python
 if executable('pyls')
