@@ -74,6 +74,8 @@ autocmd FileType mail setlocal expandtab tabstop=2 shiftwidth=2
 autocmd FileType cpp setlocal expandtab tabstop=4 shiftwidth=4
 " for yaml file
 autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2
+" for json file
+autocmd Filetype json let g:indentLine_enabled = 0
 
 " for markdown file
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal filetype=markdown expandtab tabstop=4 shiftwidth=4
