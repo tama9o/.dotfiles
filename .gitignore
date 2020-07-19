@@ -2,7 +2,7 @@
 .vim/backup
 .vim/plugged
 
-.vim/.local.vimrc
+.vim/.vimrc.local
 
 .vim/autoload
 .vim/colors

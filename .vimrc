@@ -95,8 +95,8 @@ nnoremap <C-]> g<C-]>
 
 set runtimepath+=~/.vim
 
-if filereadable(expand("~/.vim/.local.vimrc"))
-	source ~/.vim/.local.vimrc
+if filereadable($HOME . "/.vim/.vimrc.local")
+	source $HOME/.vim/.vimrc.local
 endif
 
 " vim-plug
