@@ -25,7 +25,7 @@ set t_vb=
 set guioptions-=T
 set guioptions-=m
 
-if filereadable($home . "/.vim/colors/molokai.vim")
+if filereadable($HOME . "/.vim/colors/molokai.vim")
   colorscheme molokai
 endif
 

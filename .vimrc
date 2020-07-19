@@ -23,6 +23,9 @@ set list
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
 set matchpairs+=<:>
 
+set conceallevel=0
+let g:vim_json_syntax_conceal = 0
+
 syntax on
 
 " tab char config
@@ -132,6 +135,7 @@ if executable('pyls')
         \ })
 endif
 
-if filereadable(expand("~/.vim/colors/molokai.vim"))
+if filereadable($HOME . "/.vim/colors/molokai.vim")
   colorscheme molokai
 endif
+
