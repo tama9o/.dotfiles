@@ -103,15 +103,6 @@ EOF
   export PATH=$PATH:~/bin
 fi
 
-if [ -z "$(grep -F 'genpa' ~/.bashrc 2>/dev/null)" ]; then
-  cat <<'EOF' >>~/.bashrc
-
-alias genp='cat /dev/random | tr -dc '\''a-zA-Z0-9!#%&()$@'\'' | fold -w 32 | head'
-alias genpa='cat /dev/random | tr -dc '\''a-zA-Z0-9'\'' | fold -w 32 | head'
-EOF
-  source ~/.bashrc
-fi
-
 #
 # Setup tools.
 #
