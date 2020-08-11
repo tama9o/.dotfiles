@@ -110,7 +110,7 @@ fi
 [ ! -d ~/bin ] && mkdir ~/bin
 
 echo "Setup 'jq'."
-if [ ! which jq &>/dev/null ]; then
+if ! which jq &>/dev/null; then
   [ "$OS" = "windows" ] && os=win
   curl -sSL https://github.com/stedolan/jq/releases/download/jq-1.6/jq-$os$ARCH$EXT -o ~/bin/jq$EXT
   if [ "$OS" = "linux" ]; then
@@ -120,14 +120,17 @@ fi
 jq --version
 
 echo "Setup 'trdsql'."
-if [ ! which trdsql &>/dev/null ]; then
-  curl -sSL "https://github.com/noborus/trdsql/releases/download/v0.7.6/trdsql_v0.7.6_$OS_$CPU$ARCH.zip" -o ~/bin/trdsql.zip
+if ! which trdsql &>/dev/null; then
+  curl -sSL "https://github.com/noborus/trdsql/releases/download/v0.7.6/trdsql_v0.7.6_${OS}_${CPU}${ARCH}.zip" -o ~/bin/trdsql.zip
   unzip ~/bin/trdsql.zip -d ~/bin
-  mv "~/bin/trdsql_v0.7.6_$OS_$CPU$ARCH/trdsql$EXT" ~/bin/
+  mv "$HOME/bin/trdsql_v0.7.6_${OS}_${CPU}${ARCH}/trdsql${EXT}" ~/bin/
 
   if [ "$OS" = "linux" ]; then
     chmod u+x ~/bin/trdsql
   fi
+
+  rm ~/bin/trdsql.zip
+  rm -r "$HOME/bin/trdsql_v0.7.6_${OS}_${CPU}${ARCH}/"
 fi
 trdsql --version
 
