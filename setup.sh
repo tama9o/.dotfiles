@@ -41,6 +41,14 @@ echo
 
 CONFIG_BASE=~/.dotfiles/
 
+# mute bell.
+if [ "$OS" = "windows" ]; then
+  if ! grep 'bell-style' ~/.inputrc &>/dev/null; then
+    echo 'Append bell-style setting to ~/.inputrc'
+    echo 'set bell-style none' >>~/.inputrc
+  fi
+fi
+
 touch $CONFIG_BASE/.vim/.vimrc.local
 
 #
