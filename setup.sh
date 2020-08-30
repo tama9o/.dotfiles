@@ -117,18 +117,18 @@ fi
 
 [ ! -d ~/bin ] && mkdir ~/bin
 
-echo "Setup 'jq'."
 if ! which jq &>/dev/null; then
+  echo "Setup 'jq'."
   [ "$OS" = "windows" ] && os=win
   curl -sSL https://github.com/stedolan/jq/releases/download/jq-1.6/jq-$os$ARCH$EXT -o ~/bin/jq$EXT
   if [ "$OS" = "linux" ]; then
     chmod u+x ~/bin/jq
   fi
+  jq --version
 fi
-jq --version
 
-echo "Setup 'trdsql'."
 if ! which trdsql &>/dev/null; then
+  echo "Setup 'trdsql'."
   curl -sSL "https://github.com/noborus/trdsql/releases/download/v0.7.6/trdsql_v0.7.6_${OS}_${CPU}${ARCH}.zip" -o ~/bin/trdsql.zip
   unzip ~/bin/trdsql.zip -d ~/bin
   mv "$HOME/bin/trdsql_v0.7.6_${OS}_${CPU}${ARCH}/trdsql${EXT}" ~/bin/
@@ -139,10 +139,10 @@ if ! which trdsql &>/dev/null; then
 
   rm ~/bin/trdsql.zip
   rm -r "$HOME/bin/trdsql_v0.7.6_${OS}_${CPU}${ARCH}/"
+  trdsql --version
 fi
-trdsql --version
 
 # make
 # sudo
 # winmerge
-
+# ctags
