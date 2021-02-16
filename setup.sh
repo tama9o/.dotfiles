@@ -172,9 +172,26 @@ if ! which jvgrep &>/dev/null; then
   jvgrep --version
 fi
 
+if ! which ctags &>/dev/null; then
+  if [ "$OS" = "windows" ]; then
+    echo "Setup 'ctags'."
 
+    ver="p5.9.20210214.0"
+    url=https://github.com/universal-ctags/ctags-win32/releases/download/${ver}/ctags-${ver}-x${ARCH}.zip
+    archive="$HOME/bin/ctags.zip"
+    extract="$HOME/bin/ctags"
+
+    curl -sSL "$url" -o "$archive"
+    unzip "$archive" -d "$extract" &>/dev/null
+    mv "$extract/ctags${EXT}" ~/bin/
+
+    rm "$archive"
+    rm -r "$extract"
+
+    ctags --version
+  fi
+fi
 
 # make
 # sudo
 # winmerge
-# ctags
