@@ -142,6 +142,38 @@ if ! which trdsql &>/dev/null; then
   trdsql --version
 fi
 
+if ! which jvgrep &>/dev/null; then
+  # jvgrep_v5.8.8_linux_amd64.tar.gz
+  # jvgrep_v5.8.8_windows_amd64.zip
+  echo "Setup 'jvgrep'."
+  ver=v5.8.8
+
+  if [ "$OS" = "windows" ]; then
+    url="https://github.com/mattn/jvgrep/releases/download/${ver}/jvgrep_${ver}_${OS}_${CPU}${ARCH}.zip"
+    curl -sSL "$url" -o ~/bin/jvgrep.zip
+    unzip ~/bin/jvgrep.zip -d ~/bin
+    mv "$HOME/bin/jvgrep_${ver}_${OS}_${CPU}${ARCH}/jvgrep${EXT}" ~/bin/
+
+    rm ~/bin/jvgrep.zip
+  fi
+  # TODO: Test
+  if [ "$OS" = "linux" ]; then
+    url="https://github.com/mattn/jvgrep/releases/download/${ver}/jvgrep_${ver}_${OS}_${CPU}${ARCH}.tar.gz"
+    curl -sSL "$url" -o ~/bin/jvgrep.tar.gz
+    tar xzf ~/bin/jvgrep.tar.gz -C ~/bin
+    mv "$HOME/bin/jvgrep_${ver}_${OS}_${CPU}${ARCH}/jvgrep${EXT}" ~/bin/
+
+    chmod u+x ~/bin/jvgrep
+    rm ~/bin/jvgrep.tar.gz
+  fi
+
+  rm -r "$HOME/bin/jvgrep_${ver}_${OS}_${CPU}${ARCH}/"
+
+  jvgrep --version
+fi
+
+
+
 # make
 # sudo
 # winmerge
