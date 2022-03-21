@@ -61,9 +61,6 @@ endif
 set shiftround
 set whichwrap=b,s,h,l,[,],<,>
 
-" other configs
-set shellslash
-
 set t_vb=
 set novisualbell
 
@@ -112,8 +109,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'prabirshrestha/vim-lsp'
 	Plug 'prabirshrestha/asyncomplete.vim'
 	Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-	Plug 'ryanolsonx/vim-lsp-python'
 call plug#end()
 
 " for vimfiler.
@@ -125,17 +120,7 @@ noremap <C-X><C-T> :!ctags -R<ENTER>
 " for Control-P
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-" for vim-lsp
-" python
-if executable('pyls')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
-
-if filereadable($HOME . "/.vim/colors/molokai.vim")
+if filereadable(expand("~/.vim/colors/molokai.vim"))
   colorscheme molokai
 endif
 
